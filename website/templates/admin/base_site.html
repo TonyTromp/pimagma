@@ -1,0 +1,9 @@
+{% extends "admin/base.html" %}
+{% load i18n static %}
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><img src="{% static 'logo/magma_text_small.jpg' %}" /><span style="color: #FFFFFF">|</span> <a href="{% url 'admin:index' %}">{{ site_header|default:_('Magma administration') }}</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

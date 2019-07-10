@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+<script>
+{% block jquery %}
+var endpoint = '/api/data/'
+{% endblock%}
+</script>
+
+{% block content %}
+{% endblock%}
+{{ text }}
+
+{% for l1obj in l1  %}
+<p>{{ l1obj }}</p>
+{% endfor %}

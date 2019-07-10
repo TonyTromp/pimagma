@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Django and Charts</title>
+    {% include 'base/css.html' %}
+    {% include 'base/bootstrap_defaults.html' %}
+</head>
+
+<body>
+        <div style="width:75%;">
+                <canvas id="canvas"></canvas>
+            </div>
+  <div class='container'>
+  {% block content %}
+  {% endblock content %}
+  </div>
+  {% include 'base/js.html' %}
+  <script>
+    $(document).ready(function(){
+        {% block jquery %}{% endblock %}
+    })
+    </script>
+
+    </body>
+</html>

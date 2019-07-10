@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+<script>
+{% block jquery %}
+alert('ddd')
+var endpoint = '/api/data/get_tactical_objects'
+
+$.ajax({
+    method: "GET",
+    url: endpoint,
+    success: function(data) {
+        console.log(data)
+    },
+    error: function(error,data) {
+        console.log('error')
+    }
+
+})
+
+{% endblock%}
+
+</script>
